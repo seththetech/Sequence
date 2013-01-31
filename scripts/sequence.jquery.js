@@ -185,9 +185,8 @@ Sequence also relies on the following open source scripts:
 
 			imagesLoaded(imagesToPreload, oncePreloaded);
     	}else{ //if not using the preloader...
-		    $(window).bind("load", function() { //when the window loads...
+		    $(function() { //when the window is ready...
 		    	oncePreloaded(); //run the init functionality when the preloader has finished
-		    	$(this).unbind("load"); //unbind the load event as it's no longer needed
 		    });
 		}
 
